@@ -1,0 +1,43 @@
+Loaded 2530 records from kaggle_cognitive_distortion_detection_dataset.csv
+Dominant distortion value counts:
+Duplicate records (by patient_question): 2
+Dropping 1 "No Distortion" twins of distorted records
+Dropped ids: [265]
+Records remaining after deduplication: 2529
+Surviving duplicate records (two different distortion labels on same question, kept with flag): 0
+span_match_type distribution (includes NaN for non-distorted records):
+Failed span matches: 215
+Multi-span recovery: 198 records recovered as multi_span
+Partial recovery:    2 records recovered as partial (only some sentences found)
+
+Updated span_match_type distribution:
+patient_question_length summary:
+
+distorted_part_length summary (non-null only):
+  patient_question_length >  1000:  766 records (30.29%)
+  patient_question_length >  1500:  394 records (15.58%)
+  patient_question_length >  2000:  166 records (6.56%)
+  patient_question_length >  2500:   24 records (0.95%)
+  patient_question_length >  3000:   11 records (0.43%)
+  patient_question_length >  4000:    4 records (0.16%)
+  patient_question_length >  5000:    2 records (0.08%)
+
+  patient_question_length < 20: 0 records
+
+Records longer than 2500 chars: 24
+Records flagged length_flag=over_threshold: 24
+is_distorted=True : 1597
+is_distorted=False: 932
+Non-distorted records that still have a distorted_part (should be 0): 0
+
+Wrote 2529 records to processed/therapistqa.csv
+
+=== Summary ===
+Total records:           2529
+Distorted:               1597
+Non-distorted:           932
+Span match - exact:      1388
+Span match - multi_span: 198
+Span match - partial:    2
+Span match - failed:     9
+Over threshold ch:       24
