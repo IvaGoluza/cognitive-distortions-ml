@@ -6,38 +6,43 @@ Dropped ids: [265]
 Records remaining after deduplication: 2529
 Surviving duplicate records (two different distortion labels on same question, kept with flag): 0
 span_match_type distribution (includes NaN for non-distorted records):
-Failed span matches: 215
-Multi-span recovery: 198 records recovered as multi_span
-Partial recovery:    2 records recovered as partial (only some sentences found)
+Failed span matches: 212
+Multi-span recovery: 203 records recovered as multi_span
+Partial recovery:    0 records recovered as partial (only some sentences found)
 
 Updated span_match_type distribution:
+Dropped 3 records due to annotation errors:
+  id=160: distorted_part belongs to a different patient question
+  id=887: distorted_part is a paraphrase not grounded in the question
+  id=1536: distorted_part is a paraphrase not grounded in the question
 patient_question_length summary:
 
 distorted_part_length summary (non-null only):
-  patient_question_length >  1000:  766 records (30.29%)
-  patient_question_length >  1500:  394 records (15.58%)
-  patient_question_length >  2000:  166 records (6.56%)
+  patient_question_length >  1000:  766 records (30.32%)
+  patient_question_length >  1500:  394 records (15.60%)
+  patient_question_length >  2000:  166 records (6.57%)
   patient_question_length >  2500:   24 records (0.95%)
-  patient_question_length >  3000:   11 records (0.43%)
+  patient_question_length >  3000:   11 records (0.44%)
   patient_question_length >  4000:    4 records (0.16%)
   patient_question_length >  5000:    2 records (0.08%)
 
   patient_question_length < 20: 0 records
-
 Records longer than 2500 chars: 24
 Records flagged length_flag=over_threshold: 24
-is_distorted=True : 1597
+is_distorted=True : 1594
 is_distorted=False: 932
 Non-distorted records that still have a distorted_part (should be 0): 0
 
-Wrote 2529 records to processed/therapistqa.csv
+Wrote 2526 records to processed/therapistqa.csv
 
 === Summary ===
-Total records:           2529
-Distorted:               1597
+Total records:           2526
+Distorted:               1594
 Non-distorted:           932
-Span match - exact:      1388
-Span match - multi_span: 198
-Span match - partial:    2
-Span match - failed:     9
+Span match - exact:      1391
+Span match - multi_span: 203
+Span match - partial:    0
+Span match - failed:     0
 Over threshold ch:       24
+
+Label distribution:
