@@ -1,0 +1,108 @@
+{
+  "raw_row_count": 600,
+  "raw_columns": [
+    "situation",
+    "thought",
+    "reframe",
+    "thinking_traps_addressed"
+  ],
+  "multi_label_share_percent": 33.0,
+  "label_count_distribution": {
+    "1": 402,
+    "2": 108,
+    "3": 57,
+    "4": 13,
+    "5": 10,
+    "6": 4,
+    "7": 4,
+    "8": 2
+  },
+  "dominant_label_distribution": {
+    "negative feeling or emotion": 80,
+    "labeling": 70,
+    "overgeneralizing": 61,
+    "mind reading": 57,
+    "all-or-nothing thinking": 57,
+    "fortune telling": 56,
+    "personalizing": 55,
+    "disqualifying the positive": 35,
+    "catastrophizing": 35,
+    "emotional reasoning": 31,
+    "none": 18,
+    "should statements": 18,
+    "blaming": 17,
+    "comparing and despairing": 8,
+    "magnification": 2
+  },
+  "all_label_counts": {
+    "negative feeling or emotion": 151,
+    "overgeneralizing": 107,
+    "labeling": 102,
+    "all-or-nothing thinking": 99,
+    "personalizing": 98,
+    "fortune telling": 78,
+    "mind reading": 71,
+    "catastrophizing": 68,
+    "emotional reasoning": 43,
+    "disqualifying the positive": 40,
+    "blaming": 34,
+    "should statements": 22,
+    "none": 19,
+    "magnification": 15,
+    "comparing and despairing": 12
+  },
+  "unique_thought_count": 286,
+  "reframes_per_thought_distribution": {
+    "2": 278,
+    "4": 6,
+    "10": 2
+  },
+  "short_record_count": 0,
+  "short_record_min_length": 5,
+  "row_count": 600,
+  "length_summary": {
+    "situation_length": {
+      "count": 600.0,
+      "mean": 98.13,
+      "std": 84.64,
+      "min": 8.0,
+      "25%": 49.0,
+      "50%": 72.5,
+      "75%": 116.5,
+      "max": 469.0
+    },
+    "thought_length": {
+      "count": 600.0,
+      "mean": 40.27,
+      "std": 29.16,
+      "min": 8.0,
+      "25%": 21.0,
+      "50%": 32.0,
+      "75%": 51.0,
+      "max": 192.0
+    },
+    "reframe_length": {
+      "count": 600.0,
+      "mean": 114.79,
+      "std": 52.97,
+      "min": 14.0,
+      "25%": 75.0,
+      "50%": 105.0,
+      "75%": 145.25,
+      "max": 282.0
+    }
+  },
+  "output_path": "processed/cognitive_reframing.csv",
+  "output_row_count": 600,
+  "output_columns": [
+    "thought_id",
+    "situation",
+    "thought",
+    "reframe",
+    "dominant_label",
+    "all_labels",
+    "situation_length",
+    "thought_length",
+    "reframe_length"
+  ]
+}
