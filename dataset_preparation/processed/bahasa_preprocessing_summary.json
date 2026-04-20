@@ -1,0 +1,28 @@
+{
+  "source_total": 4992,
+  "source_distorted": 2746,
+  "source_non_distorted": 2246,
+  "subset_A_non_distorted_records": 2246,
+  "subset_A_under_10_chars_present": 0,
+  "distorted_with_markers_in_bahasa": 2209,
+  "distorted_with_markers_in_english": 1070,
+  "distorted_markers_lost_in_translation": 1139,
+  "subset_B_span_records_english": 1065,
+  "subset_B_span_status_distribution": {
+    "exact": 1048,
+    "multi_span": 17
+  },
+  "subset_B_label_distribution": {
+    "Labeling": 222,
+    "Should Statements": 194,
+    "Mind Reading": 188,
+    "Overgeneralization": 105,
+    "Discounting the Positives": 77,
+    "Mental Filter": 76,
+    "All-or-Nothing Thinking": 62,
+    "Magnification": 55,
+    "Personalization": 44,
+    "Fortune Telling": 28,
+    "Emotional Reasoning": 14
+  }
+}
