@@ -1,0 +1,43 @@
+BASELINE A: SBERT (all-mpnet-base-v2) + SVM
+
+                         precision    recall  f1-score   support
+
+All-or-nothing thinking      0.065     0.100     0.078        20
+    Emotional Reasoning      0.140     0.222     0.171        27
+        Fortune-telling      0.091     0.103     0.097        29
+               Labeling      0.108     0.121     0.114        33
+          Magnification      0.182     0.154     0.167        39
+          Mental filter      0.163     0.333     0.219        24
+           Mind Reading      0.283     0.271     0.277        48
+          No Distortion      0.642     0.471     0.543       187
+     Overgeneralization      0.172     0.104     0.130        48
+        Personalization      0.175     0.233     0.200        30
+      Should statements      0.250     0.333     0.286        21
+
+               accuracy                          0.294       506
+              macro avg      0.206     0.222     0.207       506
+           weighted avg      0.345     0.294     0.312       506
+
+---------------------------------------------------------------------------------------------------
+
+BASELINE A: SBERT (BAAI/bge-large-en-v1.5) + SVM
+
+                         precision    recall  f1-score   support
+
+All-or-nothing thinking      0.148     0.200     0.170        20
+    Emotional Reasoning      0.154     0.148     0.151        27
+        Fortune-telling      0.108     0.138     0.121        29
+               Labeling      0.185     0.152     0.167        33
+          Magnification      0.135     0.128     0.132        39
+          Mental filter      0.140     0.292     0.189        24
+           Mind Reading      0.340     0.333     0.337        48
+          No Distortion      0.671     0.535     0.595       187
+     Overgeneralization      0.281     0.188     0.225        48
+        Personalization      0.211     0.267     0.235        30
+      Should statements      0.139     0.238     0.175        21
+
+               accuracy                          0.330       506
+              macro avg      0.228     0.238     0.227       506
+           weighted avg      0.375     0.330     0.346       506
+
+
