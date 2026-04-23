@@ -1,0 +1,77 @@
+BASELINE A: TF-IDF + SVM - unigrams & bigrams - remove english stopwords
+
+                         precision    recall  f1-score   support
+
+All-or-nothing thinking      0.053     0.050     0.051        20
+    Emotional Reasoning      0.188     0.111     0.140        27
+        Fortune-telling      0.174     0.138     0.154        29
+               Labeling      0.160     0.121     0.138        33
+          Magnification      0.150     0.154     0.152        39
+          Mental filter      0.130     0.125     0.128        24
+           Mind Reading      0.321     0.354     0.337        48
+          No Distortion      0.572     0.722     0.638       187
+     Overgeneralization      0.114     0.083     0.096        48
+        Personalization      0.067     0.033     0.044        30
+      Should statements      0.238     0.238     0.238        21
+
+               accuracy                          0.362       506
+              macro avg      0.197     0.194     0.192       506
+           weighted avg      0.317     0.362     0.335       506
+
+---------------------------------------------------------------------------------------------------
+
+BASELINE A: TF-IDF + SVM - unigrams & bigrams - remove english stopwords - binary
+
+               precision    recall  f1-score   support
+
+    Distorted      0.807     0.683     0.740       319
+No Distortion      0.572     0.722     0.638       187
+
+     accuracy                          0.698       506
+    macro avg      0.690     0.703     0.689       506
+ weighted avg      0.720     0.698     0.703       506
+
+---------------------------------------------------------------------------------------------------
+
+BASELINE A: TF-IDF + SVM - unigrams & bigrams - keep stopwords
+
+                         precision    recall  f1-score   support
+
+All-or-nothing thinking      0.077     0.050     0.061        20
+    Emotional Reasoning      0.059     0.037     0.045        27
+        Fortune-telling      0.240     0.207     0.222        29
+               Labeling      0.056     0.030     0.039        33
+          Magnification      0.100     0.077     0.087        39
+          Mental filter      0.091     0.083     0.087        24
+           Mind Reading      0.320     0.333     0.327        48
+          No Distortion      0.560     0.775     0.650       187
+     Overgeneralization      0.111     0.083     0.095        48
+        Personalization      0.100     0.067     0.080        30
+      Should statements      0.250     0.190     0.216        21
+
+               accuracy                          0.366       506
+              macro avg      0.178     0.176     0.174       506
+           weighted avg      0.300     0.366     0.325       506
+
+---------------------------------------------------------------------------------------------------
+
+BASELINE A: TF-IDF + SVM - unigrams & trigrams - remove english stopwords
+
+                         precision    recall  f1-score   support
+
+All-or-nothing thinking      0.056     0.050     0.053        20
+    Emotional Reasoning      0.158     0.111     0.130        27
+        Fortune-telling      0.167     0.138     0.151        29
+               Labeling      0.192     0.152     0.169        33
+          Magnification      0.158     0.154     0.156        39
+          Mental filter      0.160     0.167     0.163        24
+           Mind Reading      0.320     0.333     0.327        48
+          No Distortion      0.576     0.711     0.636       187
+     Overgeneralization      0.111     0.083     0.095        48
+        Personalization      0.000     0.000     0.000        30
+      Should statements      0.217     0.238     0.227        21
+
+               accuracy                          0.358       506
+              macro avg      0.192     0.194     0.192       506
+           weighted avg      0.315     0.358     0.333       506
+
