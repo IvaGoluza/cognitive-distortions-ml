@@ -1,0 +1,75 @@
+BASELINE 1A: TF-IDF + SVM - unigrams & bigrams - remove english stopwords
+
+                                                                 precision    recall  f1-score   support
+
+Black-and-white or polarized thinking / All or nothing thinking      0.250     0.251     0.251       665
+                                                Catastrophizing      0.439     0.424     0.431       726
+                                       Discounting the positive      0.376     0.401     0.388       681
+                        Jumping to conclusions: Fortune-telling      0.253     0.238     0.245       711
+                           Jumping to conclusions: mind reading      0.441     0.561     0.494       699
+                                       Labeling and mislabeling      0.360     0.324     0.341       669
+                                               Mental filtering      0.279     0.236     0.256       660
+                                             Overgeneralization      0.275     0.276     0.275       688
+                                                Personalization      0.316     0.322     0.319       653
+                                              Should statements      0.315     0.305     0.310       655
+
+                                                       accuracy                          0.335      6807
+                                                      macro avg      0.330     0.334     0.331      6807
+                                                   weighted avg      0.331     0.335     0.332      6807
+
+---------------------------------------------------------------------------------------------------
+
+BASELINE 1B: TF-IDF + SVM - unigrams & bigrams - remove english stopwords - binary
+
+              precision    recall  f1-score   support
+
+   Distorted      1.000     1.000     1.000      6807
+
+    accuracy                          1.000      6807
+   macro avg      1.000     1.000     1.000      6807
+weighted avg      1.000     1.000     1.000      6807
+
+---------------------------------------------------------------------------------------------------
+
+BASELINE 1C: TF-IDF + SVM - unigrams & bigrams - keep stopwords
+
+                                                                 precision    recall  f1-score   support
+
+Black-and-white or polarized thinking / All or nothing thinking      0.420     0.308     0.356       665
+                                                Catastrophizing      0.457     0.488     0.472       726
+                                       Discounting the positive      0.585     0.598     0.591       681
+                        Jumping to conclusions: Fortune-telling      0.324     0.307     0.315       711
+                           Jumping to conclusions: mind reading      0.545     0.638     0.588       699
+                                       Labeling and mislabeling      0.511     0.442     0.474       669
+                                               Mental filtering      0.443     0.453     0.448       660
+                                             Overgeneralization      0.390     0.436     0.412       688
+                                                Personalization      0.531     0.518     0.524       653
+                                              Should statements      0.880     0.937     0.908       655
+
+                                                       accuracy                          0.511      6807
+                                                      macro avg      0.509     0.512     0.509      6807
+                                                   weighted avg      0.506     0.511     0.507      6807
+
+---------------------------------------------------------------------------------------------------
+
+BASELINE 1D: TF-IDF + SVM - unigrams & trigrams - remove english stopwords
+
+                                                                 precision    recall  f1-score   support
+
+Black-and-white or polarized thinking / All or nothing thinking      0.251     0.247     0.249       665
+                                                Catastrophizing      0.444     0.435     0.439       726
+                                       Discounting the positive      0.381     0.408     0.394       681
+                        Jumping to conclusions: Fortune-telling      0.253     0.235     0.244       711
+                           Jumping to conclusions: mind reading      0.442     0.564     0.496       699
+                                       Labeling and mislabeling      0.357     0.320     0.337       669
+                                               Mental filtering      0.279     0.239     0.258       660
+                                             Overgeneralization      0.281     0.281     0.281       688
+                                                Personalization      0.320     0.328     0.324       653
+                                              Should statements      0.317     0.310     0.314       655
+
+                                                       accuracy                          0.338      6807
+                                                      macro avg      0.333     0.337     0.333      6807
+                                                   weighted avg      0.334     0.338     0.335      6807
+
+
+
