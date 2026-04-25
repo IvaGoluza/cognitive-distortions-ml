@@ -1,0 +1,18 @@
+BASELINE 2B: SBERT (BAAI/bge-large-en-v1.5) + SVM
+
+                                                                 precision    recall  f1-score   support
+
+Black-and-white or polarized thinking / All or nothing thinking      0.370     0.317     0.342       665
+                                                Catastrophizing      0.540     0.556     0.548       726
+                                       Discounting the positive      0.676     0.667     0.671       681
+                        Jumping to conclusions: Fortune-telling      0.381     0.368     0.375       711
+                           Jumping to conclusions: mind reading      0.538     0.717     0.614       699
+                                       Labeling and mislabeling      0.535     0.502     0.518       669
+                                               Mental filtering      0.515     0.476     0.494       660
+                                             Overgeneralization      0.379     0.333     0.354       688
+                                                Personalization      0.522     0.484     0.502       653
+                                              Should statements      0.783     0.896     0.836       655
+
+                                                       accuracy                          0.531      6807
+                                                      macro avg      0.524     0.532     0.525      6807
+                                                   weighted avg      0.523     0.531     0.524      6807
