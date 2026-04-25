@@ -1,4 +1,4 @@
-BASELINE A: SBERT (all-mpnet-base-v2) + SVM
+BASELINE 2A: SBERT (all-mpnet-base-v2) + SVM
 
                          precision    recall  f1-score   support
 
@@ -20,7 +20,7 @@ All-or-nothing thinking      0.065     0.100     0.078        20
 
 ---------------------------------------------------------------------------------------------------
 
-BASELINE A: SBERT (BAAI/bge-large-en-v1.5) + SVM
+BASELINE 2B: SBERT (BAAI/bge-large-en-v1.5) + SVM
 
                          precision    recall  f1-score   support
 

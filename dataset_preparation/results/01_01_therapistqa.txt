@@ -1,4 +1,4 @@
-BASELINE A: TF-IDF + SVM - unigrams & bigrams - remove english stopwords
+BASELINE 1A: TF-IDF + SVM - unigrams & bigrams - remove english stopwords
 
                          precision    recall  f1-score   support
 
@@ -20,7 +20,7 @@ All-or-nothing thinking      0.053     0.050     0.051        20
 
 ---------------------------------------------------------------------------------------------------
 
-BASELINE A: TF-IDF + SVM - unigrams & bigrams - remove english stopwords - binary
+BASELINE 1B: TF-IDF + SVM - unigrams & bigrams - remove english stopwords - binary
 
                precision    recall  f1-score   support
 
@@ -33,7 +33,7 @@ No Distortion      0.572     0.722     0.638       187
 
 ---------------------------------------------------------------------------------------------------
 
-BASELINE A: TF-IDF + SVM - unigrams & bigrams - keep stopwords
+BASELINE 1C: TF-IDF + SVM - unigrams & bigrams - keep stopwords
 
                          precision    recall  f1-score   support
 
@@ -55,7 +55,7 @@ All-or-nothing thinking      0.077     0.050     0.061        20
 
 ---------------------------------------------------------------------------------------------------
 
-BASELINE A: TF-IDF + SVM - unigrams & trigrams - remove english stopwords
+BASELINE 1D: TF-IDF + SVM - unigrams & trigrams - remove english stopwords
 
                          precision    recall  f1-score   support
 

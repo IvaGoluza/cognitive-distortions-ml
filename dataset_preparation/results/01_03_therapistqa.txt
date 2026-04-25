@@ -1,0 +1,21 @@
+BASELINE 3A: TF-IDF + LogReg
+
+=== TF-IDF + Logistic Regression on TherapistQA ===
+                         precision    recall  f1-score   support
+
+All-or-nothing thinking      0.042     0.050     0.045        20
+    Emotional Reasoning      0.138     0.148     0.143        27
+        Fortune-telling      0.226     0.241     0.233        29
+               Labeling      0.200     0.182     0.190        33
+          Magnification      0.194     0.154     0.171        39
+          Mental filter      0.100     0.125     0.111        24
+           Mind Reading      0.238     0.312     0.270        48
+          No Distortion      0.636     0.599     0.617       187
+     Overgeneralization      0.207     0.125     0.156        48
+        Personalization      0.034     0.033     0.034        30
+      Should statements      0.176     0.286     0.218        21
+
+               accuracy                          0.330       506
+              macro avg      0.199     0.205     0.199       506
+           weighted avg      0.341     0.330     0.333       506
+
