@@ -19,18 +19,6 @@ Black-and-white or polarized thinking / All or nothing thinking      0.250     0
 
 ---------------------------------------------------------------------------------------------------
 
-BASELINE 1B: TF-IDF + SVM - unigrams & bigrams - remove english stopwords - binary
-
-              precision    recall  f1-score   support
-
-   Distorted      1.000     1.000     1.000      6807
-
-    accuracy                          1.000      6807
-   macro avg      1.000     1.000     1.000      6807
-weighted avg      1.000     1.000     1.000      6807
-
----------------------------------------------------------------------------------------------------
-
 BASELINE 1C: TF-IDF + SVM - unigrams & bigrams - keep stopwords
 
                                                                  precision    recall  f1-score   support
