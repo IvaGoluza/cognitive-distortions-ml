@@ -1,6 +1,5 @@
 BASELINE 3A: TF-IDF + LogReg
 
-=== TF-IDF + Logistic Regression on TherapistQA ===
                          precision    recall  f1-score   support
 
 All-or-nothing thinking      0.042     0.050     0.045        20
