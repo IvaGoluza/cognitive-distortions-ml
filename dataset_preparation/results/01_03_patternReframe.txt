@@ -1,0 +1,18 @@
+BASELINE 3A: TF-IDF + LogReg
+
+                                                                 precision    recall  f1-score   support
+
+Black-and-white or polarized thinking / All or nothing thinking      0.285     0.257     0.271       665
+                                                Catastrophizing      0.465     0.434     0.449       726
+                                       Discounting the positive      0.375     0.408     0.391       681
+                        Jumping to conclusions: Fortune-telling      0.273     0.250     0.261       711
+                           Jumping to conclusions: mind reading      0.452     0.608     0.518       699
+                                       Labeling and mislabeling      0.383     0.311     0.343       669
+                                               Mental filtering      0.289     0.262     0.275       660
+                                             Overgeneralization      0.294     0.286     0.290       688
+                                                Personalization      0.357     0.352     0.355       653
+                                              Should statements      0.319     0.360     0.338       655
+
+                                                       accuracy                          0.354      6807
+                                                      macro avg      0.349     0.353     0.349      6807
+                                                   weighted avg      0.350     0.354     0.350      6807
