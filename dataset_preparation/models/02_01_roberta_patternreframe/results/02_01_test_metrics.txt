@@ -1,0 +1,27 @@
+Roberta - PatternReframe - Hard label
+=== Test set metrics ===
+  test_loss: 1.2687
+  test_accuracy: 0.6094
+  test_f1_weighted: 0.6097
+  test_f1_macro: 0.6116
+  test_runtime: 16.3941
+  test_samples_per_second: 415.2110
+  test_steps_per_second: 12.9930
+
+=== Per-category report ===
+                                                                 precision    recall  f1-score   support
+
+Black-and-white or polarized thinking / All or nothing thinking      0.603     0.448     0.514       665
+                                                Catastrophizing      0.588     0.590     0.589       726
+                                       Discounting the positive      0.728     0.673     0.699       681
+                        Jumping to conclusions: Fortune-telling      0.378     0.442     0.408       711
+                           Jumping to conclusions: mind reading      0.621     0.721     0.668       699
+                                       Labeling and mislabeling      0.595     0.555     0.574       669
+                                               Mental filtering      0.650     0.565     0.605       660
+                                             Overgeneralization      0.479     0.580     0.525       688
+                                                Personalization      0.645     0.585     0.614       653
+                                              Should statements      0.897     0.948     0.922       655
+
+                                                       accuracy                          0.609      6807
+                                                      macro avg      0.619     0.611     0.612      6807
+                                                   weighted avg      0.616     0.609     0.610      6807

@@ -1,4 +1,5 @@
 # Trained models — too large for git
-models/
+models/**/model/
+models/**/model/**
 *.safetensors
 *.bin
