@@ -1,0 +1,9 @@
+Roberta - PatternReframe - soft labels - alpha=0.5
+=== Test set metrics ===
+  test_loss: 1.1920
+  test_accuracy: 0.6148
+  test_f1_weighted: 0.6155
+  test_f1_macro: 0.6174
+  test_runtime: 16.0397
+  test_samples_per_second: 424.3830
+  test_steps_per_second: 13.2800
