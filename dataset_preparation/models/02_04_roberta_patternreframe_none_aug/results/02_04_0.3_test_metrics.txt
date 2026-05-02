@@ -1,0 +1,9 @@
+Roberta - PatternReframe - soft labels - alpha=0.3 - With 'No Distortion' class
+=== Test set metrics ===
+  test_loss: 1.1363
+  test_accuracy: 0.6378
+  test_f1_weighted: 0.6374
+  test_f1_macro: 0.6389
+  test_runtime: 17.8317
+  test_samples_per_second: 419.9270
+  test_steps_per_second: 13.1230
