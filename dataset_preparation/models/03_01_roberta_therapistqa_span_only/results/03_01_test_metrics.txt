@@ -1,0 +1,31 @@
+=== Test set metrics ===
+  test_loss: 1.9782
+  test_accuracy: 0.3933
+  test_f1_weighted: 0.3914
+  test_f1_macro: 0.3650
+  test_runtime: 2.3591
+  test_samples_per_second: 101.3080
+  test_steps_per_second: 3.3910
+
+=== Per-category report ===
+                         precision    recall  f1-score   support
+
+All-or-nothing thinking      0.000     0.000     0.000        15
+    Emotional Reasoning      0.217     0.250     0.233        20
+        Fortune-telling      0.545     0.571     0.558        21
+               Labeling      0.462     0.720     0.562        25
+          Magnification      0.417     0.345     0.377        29
+          Mental filter      0.138     0.222     0.170        18
+           Mind Reading      0.684     0.361     0.473        36
+     Overgeneralization      0.385     0.417     0.400        36
+        Personalization      0.579     0.478     0.524        23
+      Should statements      0.333     0.375     0.353        16
+
+               accuracy                          0.393       239
+              macro avg      0.376     0.374     0.365       239
+           weighted avg      0.414     0.393     0.391       239
+
+
+The last training epoch:
+Epoch	Training Loss	Validation Loss	Accuracy	F1 Weighted	F1 Macro
+10	    0.226090	    2.034668	    0.426778	0.435222	0.426115
