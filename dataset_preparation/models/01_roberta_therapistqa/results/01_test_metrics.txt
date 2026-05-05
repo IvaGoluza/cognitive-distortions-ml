@@ -1,7 +1,27 @@
-Roberta - TherapistQA
-Test set metrics:
-  test_loss: 1.9460
-  test_model_preparation_time: 0.0027
-  test_runtime: 10.2820
-  test_samples_per_second: 36.8610
-  test_steps_per_second: 1.1670
+=== Test set metrics ===
+  test_loss: 2.2457
+  test_accuracy: 0.3668
+  test_f1_weighted: 0.3721
+  test_f1_macro: 0.2681
+  test_runtime: 11.5027
+  test_samples_per_second: 32.9490
+  test_steps_per_second: 1.0430
+
+=== Per-category report ===
+                         precision    recall  f1-score   support
+
+All-or-nothing thinking      0.167     0.133     0.148        15
+    Emotional Reasoning      0.143     0.100     0.118        20
+        Fortune-telling      0.250     0.238     0.244        21
+               Labeling      0.160     0.160     0.160        25
+          Magnification      0.240     0.414     0.304        29
+          Mental filter      0.167     0.222     0.190        18
+           Mind Reading      0.304     0.472     0.370        36
+          No Distortion      0.702     0.521     0.598       140
+     Overgeneralization      0.158     0.083     0.109        36
+        Personalization      0.333     0.478     0.393        23
+      Should statements      0.273     0.375     0.316        16
+
+               accuracy                          0.367       379
+              macro avg      0.263     0.291     0.268       379
+           weighted avg      0.400     0.367     0.372       379
