@@ -1,0 +1,13 @@
+{
+  "model_name": "roberta-base",
+  "scheme": "3B",
+  "test_size": 379,
+  "category_summary": {
+    "micro_precision": 0.024320457796852647,
+    "micro_recall": 0.06227106227106227,
+    "micro_f1": 0.03497942386831276,
+    "macro_f1": 0.03767705077798108
+  },
+  "seqeval_3b_strict_micro_f1": 0.029934518241347054,
+  "seqeval_3c_strict_micro_f1": 0.09670781893004116
+}

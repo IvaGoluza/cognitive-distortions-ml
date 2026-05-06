@@ -1,0 +1,41 @@
+=== seqeval (3B, strict span match) ===
+                         precision    recall  f1-score   support
+
+All-or-nothing thinking     0.0000    0.0000    0.0000        17
+    Emotional Reasoning     0.0000    0.0000    0.0000        23
+        Fortune-telling     0.0312    0.0400    0.0351        25
+               Labeling     0.0000    0.0000    0.0000        28
+          Magnification     0.0079    0.0323    0.0127        31
+          Mental filter     0.0000    0.0000    0.0000        22
+           Mind Reading     0.0000    0.0000    0.0000        38
+     Overgeneralization     0.0066    0.0233    0.0103        43
+        Personalization     0.0000    0.0000    0.0000        28
+      Should statements     0.0588    0.0556    0.0571        18
+
+              micro avg     0.0085    0.0147    0.0108       273
+              macro avg     0.0105    0.0151    0.0115       273
+           weighted avg     0.0087    0.0147    0.0100       273
+
+=== seqeval (3C projection) ===
+              precision    recall  f1-score   support
+
+        DIST     0.0702    0.1209    0.0888       273
+
+   micro avg     0.0702    0.1209    0.0888       273
+   macro avg     0.0702    0.1209    0.0888       273
+weighted avg     0.0702    0.1209    0.0888       273
+
+=== Category-level (per-category) ===
+               category  tp  fp  fn  precision  recall     f1
+All-or-nothing thinking   0 108  17     0.0000  0.0000 0.0000
+    Emotional Reasoning   0 114  23     0.0000  0.0000 0.0000
+        Fortune-telling   1 117  24     0.0085  0.0400 0.0140
+               Labeling   2 133  26     0.0148  0.0714 0.0245
+          Magnification   3 397  28     0.0075  0.0968 0.0139
+          Mental filter   0 181  22     0.0000  0.0000 0.0000
+           Mind Reading   1 220  37     0.0045  0.0263 0.0077
+     Overgeneralization   1 303  42     0.0033  0.0233 0.0058
+        Personalization   1 118  27     0.0084  0.0357 0.0136
+      Should statements   1 116  17     0.0085  0.0556 0.0148
+
+Category-level summary: {'micro_precision': 0.0055, 'micro_recall': 0.0366, 'micro_f1': 0.0096, 'macro_f1': np.float64(0.0094)}
