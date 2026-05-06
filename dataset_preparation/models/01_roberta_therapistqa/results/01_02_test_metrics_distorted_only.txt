@@ -1,0 +1,23 @@
+=== Full-text classifier evaluated on distorted-only 10-class test set ===
+  Records:     239
+  Accuracy:    0.3096
+  F1 weighted: 0.2992
+  F1 macro:    0.2876
+
+=== Per-category report (10-class distorted-only) ===
+                         precision    recall  f1-score   support
+
+All-or-nothing thinking      0.222     0.133     0.167        15
+    Emotional Reasoning      0.154     0.100     0.121        20
+        Fortune-telling      0.294     0.238     0.263        21
+               Labeling      0.250     0.200     0.222        25
+          Magnification      0.333     0.448     0.382        29
+          Mental filter      0.200     0.222     0.211        18
+           Mind Reading      0.354     0.472     0.405        36
+     Overgeneralization      0.281     0.250     0.265        36
+        Personalization      0.407     0.478     0.440        23
+      Should statements      0.429     0.375     0.400        16
+
+               accuracy                          0.310       239
+              macro avg      0.292     0.292     0.288       239
+           weighted avg      0.298     0.310     0.299       239
