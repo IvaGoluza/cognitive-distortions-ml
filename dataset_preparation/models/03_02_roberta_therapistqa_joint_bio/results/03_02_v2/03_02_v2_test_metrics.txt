@@ -41,3 +41,15 @@ All-or-nothing thinking   1  39  16     0.0250  0.0588 0.0351
       Should statements   2  39  16     0.0488  0.1111 0.0678
 
 Category-level summary: {'micro_precision': 0.0243, 'micro_recall': 0.0623, 'micro_f1': 0.035, 'macro_f1': np.float64(0.0377)}
+
+8 of 10 categories have at least some true positives, instead of 2.
+The distribution of FPs is much more even (39–123 per category) instead of concentrated on two (529 and 1818).
+The model is no longer collapsing onto two convenient categories — it's making genuine attempts across all 10.
+It's just not making them well enough to reliably hit the right boundaries.
+That pattern — model produces predictions across all categories, gets boundaries roughly in the right region but rarely exactly,
+and confuses categories with each other — is the signature of a task that's genuinely hard at this data scale, not a misconfigured training run.
+The model has learned something (token accuracy 0.83 is consistent with non-trivial learning on O, and category coverage is now uniform),
+but the signal-to-noise ratio for fine-grained boundaries on 10 categories with ~110 spans each isn't there.
+
+Span F1 strict 0.032, span F1 3C 0.135. Negative result with diagnostic table showing the model spreads predictions
+across all categories but cannot reliably localise + classify simultaneously at this data scale.

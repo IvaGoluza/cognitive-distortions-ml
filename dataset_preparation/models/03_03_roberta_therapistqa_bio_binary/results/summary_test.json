@@ -1,0 +1,8 @@
+{
+  "model_name": "roberta-base",
+  "scheme": "3C",
+  "test_size": 379,
+  "span_precision_strict": 0.09981167608286252,
+  "span_recall_strict": 0.19413919413919414,
+  "span_f1_strict": 0.13184079601990048
+}

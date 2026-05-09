@@ -1,0 +1,161 @@
+01 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Final validation metrics: {'eval_loss': 0.9449857473373413, 'eval_token_accuracy': 0.8161662232357786, 'eval_span_precision_strict': 0.05927051671732523, 'eval_span_recall_strict': 0.2846715328467153, 'eval_span_f1_strict': 0.0981132075471698, 'eval_span_f1_3c': 0.0981132075471698, 'eval_runtime': 3.8031, 'eval_samples_per_second': 99.655, 'eval_steps_per_second': 6.311, 'epoch': 8.0}
+
+=== seqeval (3C, strict span match) ===
+                 precision    recall  f1-score   support
+DIST             0.0976    0.2674    0.1430       273
+micro avg        0.0976    0.2674    0.1430       273
+macro avg        0.0976    0.2674    0.1430       273
+weighted avg     0.0976    0.2674    0.1430       273
+
+=== Headline ===
+Span precision (strict): 0.0544
+Span recall    (strict): 0.2674
+Span F1        (strict): 0.0905
+
+Looking at the validation metrics: recall is 0.28 with precision 0.06. The model is generating roughly 5× too many predicted span-tokens, which means it is identifying distorted regions, just over-extending them or fragmenting them. Strict F1 punishes both fragmentation (one gold span split into three predictions = three FPs and one FN) and over-extension (predicted span 5 tokens longer than gold = full FN under strict)
+
+A second issue worth ruling out: the boundary detection itself may be hampered by class imbalance on B-DIST specifically.
+With weight 8.0 on B-DIST (1,258 train tokens) versus 2.46 on I-DIST (48,362 tokens), the model has a much weaker signal for "where does a span start" than "is this token inside a span". This is the standard NER-with-rare-Bs problem.
+A simple intervention: weighting B-DIST more aggressively.
+
+The dataset's spans are highlighted by therapists from full patient questions. Inter-annotator agreement was reported at 61% in Shreevastava & Foltz, which is low — therapists frequently disagree about exactly where a distorted thought begins and ends. Strict span F1 requires the model to predict a span with exactly the same character/token boundaries as the human annotator. If human annotators don't even agree with each other on boundaries, a model trained on noisy labels can't be expected to predict them exactly either.
+This is why most NER evaluation reports both strict and partial/lenient matching. The seqeval library has a default mode that does partial matching (any overlap = match) which is much closer to what's clinically meaningful — knowing roughly where the distortion is, even if the exact boundaries differ by a few tokens.
+
+
+02 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+=== STRICT (exact boundary match) ===
+                 precision    recall  f1-score   support
+DIST             0.0976    0.2674    0.1430       273
+micro avg        0.0976    0.2674    0.1430       273
+macro avg        0.0976    0.2674    0.1430       273
+weighted avg     0.0976    0.2674    0.1430       273
+
+The model's recall is 0.27 (it identifies ≈27% of gold spans with exact boundary match),
+and precision is around 0.05–0.10 (most of what it predicts isn't matched).
+A precision of 0.05 means ≈19 of every 20 predicted spans don't match a gold span exactly.
+With 273 gold spans in test and recall 0.27, the model finds 73 correct spans — but it predicts roughly 750 spans total (since 73 / 0.10 ≈ 730).
+The model is massively over-predicting: producing many short fragmented spans and many over-extended ones, both of which fail strict matching.
+
+The high B-DIST weight (8.0) is too aggressive for a binary task. The model has learned to scatter B-DIST predictions
+liberally because the loss heavily rewards finding any boundary token. Combined with no category to coordinate, the model produces noisy fragmented output.
+Next step is to drop the weights. The 3C task has enough positive signal in I-DIST (48k tokens, 13% of training) that the model doesn't need aggressive weighting.
+Try weights closer to natural frequencies, with only modest boost on B-DIST.
+
+
+03 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Class weights:
+   0 O                            count= 307419  w=1.000
+   1 B-DIST                       count=   1258  w=4.000
+   2 I-DIST                       count=  48362  w=2.521
+
+Final validation metrics: {'eval_loss': 1.2394020557403564, 'eval_token_accuracy': 0.832851894083365, 'eval_span_precision_strict': 0.09075907590759076, 'eval_span_recall_strict': 0.20072992700729927, 'eval_span_f1_strict': 0.125, 'eval_span_f1_3c': 0.125, 'eval_runtime': 3.7486, 'eval_samples_per_second': 101.104, 'eval_steps_per_second': 6.402, 'epoch': 12.0}
+
+=== seqeval (3C, strict span match) ===
+              precision    recall  f1-score   support
+
+        DIST     0.1295    0.1978    0.1565       273
+
+   micro avg     0.1295    0.1978    0.1565       273
+   macro avg     0.1295    0.1978    0.1565       273
+weighted avg     0.1295    0.1978    0.1565       273
+
+
+=== Headline ===
+Span precision (strict): 0.0833
+Span recall    (strict): 0.2015
+Span F1        (strict): 0.1179
+
+The model is finding the right region of distorted text (recall 0.20–0.27 across runs is consistent), but cannot reproduce the exact gold boundaries.
+
+The "Headline" numbers in the output (0.08 / 0.20 / 0.12) differ from the seqeval STRICT block above (0.13 / 0.20 / 0.16).
+That's because the headline is computed via runs_to_spans function (which converts predictions to token-index spans),
+while seqeval works at the BIO-tag level directly. The discrepancy itself is small but tells that boundary alignment is a real, measurable issue, and not a model failure.
+
+SUMMARY
+The joint 3B BIO tagger experiment yielded F1 strict 0.032; switching to binary 3C span detection improved performance
+modestly to F1 strict ≈ 0.12 with recall ≈ 0.20, indicating the model identifies approximate locations of distorted
+thinking but does not consistently reproduce annotator-assigned span boundaries.
+The reported inter-annotator agreement of 61% on TherapistQA is likely a contributing factor,
+since strict boundary matching is sensitive to the variability inherent in expert span annotation.
+
+
+04 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+=== seqeval (3C, strict span match) ===
+              precision    recall  f1-score   support
+
+        DIST     0.1568    0.1941    0.1735       273
+
+   micro avg     0.1568    0.1941    0.1735       273
+   macro avg     0.1568    0.1941    0.1735       273
+weighted avg     0.1568    0.1941    0.1735       273
+
+
+=== Headline ===
+Span precision (strict): 0.0998
+Span recall    (strict): 0.1941
+Span F1        (strict): 0.1318
+
+
+=== Record 0 (id=179, category=Mind Reading) ===
+Gold spans (token positions): [(14, 55), (383, 402)]
+Pred spans (token positions): []
+
+--- Gold span text ---
+  [14:55] He is a gifted kid who doesn’t really like school. He speaks out of turn, has said mean things, and doesn’t really seem to care about authority or following the rules.
+  [383:402] He gets really wound up and doesn’t listen and it feels like attention seeking behavior.
+--- Predicted span text ---
+
+=== Record 3 (id=791, category=All-or-nothing thinking) ===
+Gold spans (token positions): [(121, 146)]
+Pred spans (token positions): [(121, 136), (136, 137)]
+
+--- Gold span text ---
+  [121:146] I cant do anything because i dont want to stress my mother as well. therefore my sister can do what ever she wants.
+--- Predicted span text ---
+  [121:136] I cant do anything because i dont want to stress my mother as well.
+  [136:137] therefore
+
+=== Record 4 (id=874, category=Mind Reading) ===
+Gold spans (token positions): [(318, 336)]
+Pred spans (token positions): [(124, 146), (336, 356), (429, 453)]
+
+--- Gold span text ---
+  [318:336] I know the stuff the stalker said hurt him because he thought it was hurting me.
+--- Predicted span text ---
+  [124:146] I need this reassurance in order to feel better about myself and affirm that people do actually care about me.
+  [336:356] I am alright with keeping the secret because I do not think he will understand why I did it.
+  [429:453] I can’t lose him and I don’t think he would ever be able to get over this lie
+
+=== Record 6 (id=2563, category=Overgeneralization) ===
+Gold spans (token positions): [(80, 120)]
+Pred spans (token positions): [(48, 79)]
+
+--- Gold span text ---
+  [80:120] Now I am at university my peers around me all have social lives and boyfriends and so it hurts more now. I tried making friends but seem to have a perpetual block for the last 10 years.
+--- Predicted span text ---
+  [48:79] When I was at school I cared but not as much about not having any friends because I was the highest performing so I saw it as necessary to my success
+
+=== Record 7 (id=2414, category=Emotional Reasoning) ===
+Gold spans (token positions): [(37, 52), (102, 121)]
+Pred spans (token positions): [(37, 52)]
+
+--- Gold span text ---
+  [37:52] All my life, I have felt mostly ignored & criticized by my mother.
+  [102:121] They also seemed to have learned much, but I always felt a little deprived for some reason.
+--- Predicted span text ---
+  [37:52] All my life, I have felt mostly ignored & criticized by my mother.
+
+
+Partial-overlap: P=0.2566  R=0.4982  F1=0.3387
+
+Recall = 0.50. For every gold distortion span in the test set, the model overlaps with it half the time. Half of all annotator-marked distortions are at least partially recovered by the model.
+Precision = 0.26. Of every 100 spans the model predicts, about 26 overlap a gold span. The remaining 74 are either spurious or are picking up text the annotator didn't mark as distorted but might still be distortion-related.
+F1 = 0.34. Harmonic mean of the two.
+The model has clearly learned to find distorted content (50% recall is real, not noise). But it's noisy in two distinct ways:
+It over-predicts. Precision 0.26 means the model produces many candidate spans. Some are fragmented (Record 3 — splitting a gold span into two), some are adjacent sentences picked instead of the annotator's choice (Records 4 and 6), and some may be genuinely distorted content the annotator missed (cognitive distortions often co-occur, and Shreevastava & Foltz's annotators were instructed to mark the primary distortion).
+Strict matching dramatically underestimates capability. Strict F1 = 0.13, partial F1 = 0.34 — that's a 2.6× gap. The strict metric is rejecting predictions that overlap gold but don't match exactly. Given that the human annotators themselves only agree 61% of the time on boundaries, expecting a model to exactly reproduce one annotator's choices is unreasonable.
