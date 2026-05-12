@@ -1,0 +1,5 @@
+Detector,Trained on,Tested on,wF1,ND recall,Notes
+PR-aug binary (variant A),PR-aug (Bahasa ND),PR-aug test (in-dist),0.9909,0.9413,Shortcut-inflated
+PR-aug binary (variant A),PR-aug (Bahasa ND),TQA test (cross-corpus),0.5514,0.2571,No transfer (confidence gap +0.018)
+TQA binary,TQA,TQA test (in-dist),0.7741,0.6643,Honest baseline
+TQA binary,TQA,PR-aug test (cross-corpus),0.617,0.2922,Inverted transfer (confidence gap -0.145)

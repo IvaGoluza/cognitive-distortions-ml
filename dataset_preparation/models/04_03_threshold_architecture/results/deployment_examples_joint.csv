@@ -1,0 +1,31 @@
+Intent,Thought,Expected,Top prediction,Confidence,2nd prediction,2nd confidence,Agreement
+distorted,"If I don't get this promotion, my whole career is a failure.",All-or-nothing,All-or-nothing,0.67,Fortune-telling,0.10,✓ match
+distorted,I made one mistake in the presentation and now everyone will think I'm incompetent.,Catastrophizing,Overgeneralization,0.26,Fortune-telling,0.24,✗ different
+distorted,She said she liked my work but she was probably just being polite.,Discounting +,Discounting +,0.50,Mind reading,0.23,✓ match
+distorted,I just know this date is going to go badly.,Fortune-telling,Fortune-telling,0.60,Catastrophizing,0.19,✓ match
+distorted,"He didn't text me back, so he must be angry with me.",Mind reading,Mind reading,0.86,Overgeneralization,0.02,✓ match
+distorted,I forgot to send the email. I'm such an idiot.,Labeling,Labeling,0.67,Personalization,0.19,✓ match
+distorted,Everyone clapped except for one person who looked bored. The whole talk was a disaster.,Mental filter,All-or-nothing,0.68,Mental filter,0.15,✗ different
+distorted,I bombed this job interview. I'm never going to find work.,Overgeneralization,Overgeneralization,0.44,Fortune-telling,0.27,✓ match
+distorted,My partner is in a bad mood. It must be something I did.,Personalization,Personalization,0.69,Labeling,0.07,✓ match
+distorted,I should be further along in my career by now.,Should,Should,0.94,Personalization,0.01,✓ match
+nondistorted,I should call my mother this weekend.,ND,Should,0.94,ND,0.01,✗ different
+nondistorted,It looks like it might rain later.,ND,Fortune-telling,0.44,Catastrophizing,0.11,✗ different
+nondistorted,I have a meeting at 3pm tomorrow.,ND,Fortune-telling,0.28,Overgeneralization,0.24,✗ different
+nondistorted,The coffee tastes good today.,ND,Mental filter,0.34,Discounting +,0.27,✗ different
+nondistorted,I want to read more this year.,ND,Should,0.45,Overgeneralization,0.16,✗ different
+nondistorted,My back hurts after sitting all day.,ND,Mental filter,0.44,All-or-nothing,0.28,✗ different
+nondistorted,I'm feeling tired and I think I'll go to bed early.,ND,Fortune-telling,0.36,All-or-nothing,0.25,✗ different
+nondistorted,The deadline is on Friday so I need to finish the report by Thursday.,ND,All-or-nothing,0.26,Mental filter,0.13,✗ different
+nondistorted,I disagreed with what she said but I understand her point.,ND,Discounting +,0.63,ND,0.13,✗ different
+nondistorted,"I made some progress today, though there's still more to do.",ND,Mental filter,0.43,Discounting +,0.39,✗ different
+ambiguous,He didn't say hi to me at the meeting.,uncertain,Mind reading,0.54,ND,0.15,ambiguous
+ambiguous,I'm worried I won't have enough money for retirement.,uncertain,Fortune-telling,0.37,Overgeneralization,0.24,ambiguous
+ambiguous,"If the funding doesn't come through, the project is over.",uncertain,All-or-nothing,0.58,Fortune-telling,0.15,ambiguous
+ambiguous,My boss has been avoiding eye contact this week.,uncertain,All-or-nothing,0.23,Mental filter,0.17,ambiguous
+ambiguous,I shouldn't have lost my temper with him.,uncertain,ND,0.85,Should,0.04,ambiguous
+ambiguous,"Given the market right now, jobs in my field are going to be hard to find.",uncertain,Fortune-telling,0.55,Overgeneralization,0.16,ambiguous
+ambiguous,I did well overall but I keep thinking about that one bad answer.,uncertain,Mental filter,0.45,Discounting +,0.38,ambiguous
+ambiguous,I don't think I'm qualified for this role.,uncertain,Labeling,0.21,Overgeneralization,0.17,ambiguous
+ambiguous,The team missed the deadline and I was the lead.,uncertain,ND,0.67,Personalization,0.12,ambiguous
+ambiguous,Something doesn't feel right but I can't put my finger on what.,uncertain,ND,0.56,Discounting +,0.13,ambiguous

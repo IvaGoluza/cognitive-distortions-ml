@@ -1,0 +1,5 @@
+Source,Count,Share %
+Binary false negative (Distorted → No Distortion),3145,61.15107913669065
+Binary false positive (No Distortion → Distorted),482,9.371961889947501
+"Type-stage error (binary correct, wrong category)",1516,29.47695897336185
+Total pipeline errors,5143,100.0

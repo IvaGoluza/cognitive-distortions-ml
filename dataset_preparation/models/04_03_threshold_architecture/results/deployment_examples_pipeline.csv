@@ -1,0 +1,31 @@
+Intent,Thought,Expected,Binary call,Bin prob(D),Pipeline pred,Type argmax,Type max-prob,Agreement
+distorted,"If I don't get this promotion, my whole career is a failure.",All-or-nothing,Distorted,0.96,All-or-nothing,All-or-nothing,0.86,✓ match
+distorted,I made one mistake in the presentation and now everyone will think ...,Catastrophizing,Distorted,0.98,Overgeneralization,Overgeneralization,0.42,✗ different
+distorted,She said she liked my work but she was probably just being polite.,Discounting +,No Distortion,0.05,ND,Discounting +,0.90,✗ different
+distorted,I just know this date is going to go badly.,Fortune-telling,Distorted,0.97,Fortune-telling,Fortune-telling,0.74,✓ match
+distorted,"He didn't text me back, so he must be angry with me.",Mind reading,Distorted,0.59,Mind reading,Mind reading,0.89,✓ match
+distorted,I forgot to send the email. I'm such an idiot.,Labeling,Distorted,0.95,Labeling,Labeling,0.86,✓ match
+distorted,Everyone clapped except for one person who looked bored. The whole ...,Mental filter,Distorted,0.64,All-or-nothing,All-or-nothing,0.67,✗ different
+distorted,I bombed this job interview. I'm never going to find work.,Overgeneralization,Distorted,0.86,Overgeneralization,Overgeneralization,0.36,✓ match
+distorted,My partner is in a bad mood. It must be something I did.,Personalization,Distorted,0.63,Personalization,Personalization,0.76,✓ match
+distorted,I should be further along in my career by now.,Should,No Distortion,0.03,ND,Should,0.96,✗ different
+nondistorted,I should call my mother this weekend.,ND,No Distortion,0.03,ND,Should,0.96,✓ match
+nondistorted,It looks like it might rain later.,ND,No Distortion,0.10,ND,Fortune-telling,0.73,✓ match
+nondistorted,I have a meeting at 3pm tomorrow.,ND,No Distortion,0.05,ND,Fortune-telling,0.65,✓ match
+nondistorted,The coffee tastes good today.,ND,No Distortion,0.06,ND,Discounting +,0.49,✓ match
+nondistorted,I want to read more this year.,ND,No Distortion,0.07,ND,Overgeneralization,0.25,✓ match
+nondistorted,My back hurts after sitting all day.,ND,No Distortion,0.44,ND,Mental filter,0.47,✓ match
+nondistorted,I'm feeling tired and I think I'll go to bed early.,ND,No Distortion,0.20,ND,Fortune-telling,0.34,✓ match
+nondistorted,The deadline is on Friday so I need to finish the report by Thursday.,ND,No Distortion,0.04,ND,All-or-nothing,0.30,✓ match
+nondistorted,I disagreed with what she said but I understand her point.,ND,No Distortion,0.20,ND,Discounting +,0.85,✓ match
+nondistorted,"I made some progress today, though there's still more to do.",ND,No Distortion,0.05,ND,Discounting +,0.79,✓ match
+ambiguous,He didn't say hi to me at the meeting.,(ambiguous),No Distortion,0.06,ND,Mind reading,0.39,ambiguous
+ambiguous,I'm worried I won't have enough money for retirement.,(ambiguous),Distorted,0.96,Mind reading,Mind reading,0.25,ambiguous
+ambiguous,"If the funding doesn't come through, the project is over.",(ambiguous),No Distortion,0.07,ND,All-or-nothing,0.76,ambiguous
+ambiguous,My boss has been avoiding eye contact this week.,(ambiguous),No Distortion,0.06,ND,Mental filter,0.31,ambiguous
+ambiguous,I shouldn't have lost my temper with him.,(ambiguous),Distorted,0.81,Personalization,Personalization,0.52,ambiguous
+ambiguous,"Given the market right now, jobs in my field are going to be hard t...",(ambiguous),No Distortion,0.08,ND,Fortune-telling,0.78,ambiguous
+ambiguous,I did well overall but I keep thinking about that one bad answer.,(ambiguous),Distorted,0.97,Mental filter,Mental filter,0.54,ambiguous
+ambiguous,I don't think I'm qualified for this role.,(ambiguous),No Distortion,0.11,ND,Personalization,0.37,ambiguous
+ambiguous,The team missed the deadline and I was the lead.,(ambiguous),No Distortion,0.06,ND,Personalization,0.37,ambiguous
+ambiguous,Something doesn't feel right but I can't put my finger on what.,(ambiguous),Distorted,0.88,Mental filter,Mental filter,0.56,ambiguous
