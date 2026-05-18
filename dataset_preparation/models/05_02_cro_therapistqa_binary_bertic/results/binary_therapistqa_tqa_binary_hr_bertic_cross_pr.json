@@ -1,0 +1,22 @@
+{
+  "model": "classla/bcms-bertic",
+  "language": "hr",
+  "trained_on": "therapistqa_hr_train",
+  "evaluated_on": "patternreframe_bilingual_test.csv",
+  "accuracy": 0.4101660055824886,
+  "f1_weighted": 0.5817272632565892,
+  "f1_macro": 0.2908636316282946,
+  "per_category_recall": {
+    "Black-and-white or polarized thinking / All or nothing thinking": 0.41654135338345866,
+    "Catastrophizing": 0.45179063360881544,
+    "Discounting the positive": 0.16152716593245228,
+    "Jumping to conclusions: Fortune-telling": 0.39662447257383965,
+    "Jumping to conclusions: mind reading": 0.6623748211731044,
+    "Labeling and mislabeling": 0.6203288490284006,
+    "Mental filtering": 0.3393939393939394,
+    "Overgeneralization": 0.43459302325581395,
+    "Personalization": 0.5145482388973966,
+    "Should statements": 0.08854961832061069
+  },
+  "n": 6807
+}
