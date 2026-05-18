@@ -1,0 +1,12 @@
+{
+  "should_statements": "(treba|trebam|trebaš|trebamo|trebate|trebao|trebala|trebali|trebale|trebalo|mora|moram|moraš|moramo|morate|morao|morala|morali|morale|moralo|moraju|bi trebao|bi trebala|bi morao|bi morala)",
+  "black_and_white": "(nikad|nikada|uvijek|svatko|nitko|ništa|nimalo|\\bsvi |\\bsve |\\bsamo |\\bjedino |\\bjedini |\\bjedina |potpuno|posve|isključivo|savršen|katastrofaln|totaln|apsolutn|zauvijek)",
+  "catastrophizing": "(propast|propa[oas]|propad|umrij|umro|umrla|poginu|katastrof|najgor|strašn|užasn|grozn|smak svijeta|kraj svijeta|uništ|razor|smrt|nikad neć|nikada neć|zauvijek|past ću|past će|past ćemo)",
+  "mind_reading": "(mora da misli|sigurno misli|sigurn[oa] sam da|znam što (misl|želi|hoć)|misli da|misle da|mora da je|očito|očit[oa] je|kladim se|kladim se da|vjerojatno misl|smatra(ju)? da|ne voli me|ne sviđam mu se|ne sviđam joj se|ne sviđam im se|odluč(io|ila|ili|ile) (je |da )(me |više |ne ))",
+  "fortune_telling": "(\\bneć[uešmo]|\\bneće\\b|\\bnećete|\\bnećemo|nikad neć|nikada neć|više neć|više neću|više neće|past ću|past će|propa(st|d|o|la)|izgubit ću|izgubit će|ostat ću sam|zauvijek)",
+  "overgeneralization": "(uvijek|nikad|nikada|svaki put|stalno|kontinuirano|opet|ponovno|neprestano|svi |svatko|nitko|svaki |svaka |svako |baš svaki|baš svaka)",
+  "personalization": "(moja krivnj|krivnja je moja|moja greška|moja je greška|kriv sam|kriva sam|kriv je zbog mene|kriva sam ja|zbog mene|sve sam ja|sve je do mene|odgovoran sam|odgovorna sam|moja odgovornost|jer sam ja|to sam ja|ja sam ta|ja sam taj|sve sam zaribao|sve sam pokvario|sve sam pokvarila)",
+  "labeling": "(idiot|glup|bezvrijed|nesposob|gubitnik|propalica|čudak|bezna[dn]|jadan|jadna|jadno|beskoristan|beskorisna|beskorisno|grozan|grozna|grozno|užasan|užasna|nikakv|sebičn|lijen|kukavica|promašaj|promašen|loš sam|loša sam|loš[ae] u |propao sam|propala sam|takv[ai]? sam|nikada neću biti dobar|nikada neću biti dobra)",
+  "mental_filtering": "(jedino vid|jedino što vid|samo vid|samo razmišljam o|samo mogu mislit|samo se sjeć|sve negativn|usredoto|fokusira|\\bali \\b|međutim|no jer|samo na|samo o |samo u )",
+  "discounting_positive": "(\\bali \\b|međutim|no jer|svejedno|nije važno|ne vrijedi|ne računa|ne broji|obična sreć|samo sreć|sreća|bilo tko može|svatko može|nije ništa posebno|nije nešto|nije zaslug|nezasluženo|slučajno)"
+}
