@@ -3,3 +3,4 @@ models/**/model/
 models/**/model/**
 *.safetensors
 *.bin
+.env
