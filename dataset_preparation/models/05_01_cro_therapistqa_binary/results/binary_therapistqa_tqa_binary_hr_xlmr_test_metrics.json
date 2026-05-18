@@ -1,0 +1,82 @@
+{
+  "model": "xlm-roberta-base",
+  "language": "hr",
+  "run_tag": "tqa_binary_hr_xlmr",
+  "test_metrics": {
+    "eval_loss": 0.6816427707672119,
+    "eval_accuracy": 0.7387862796833773,
+    "eval_precision_distorted": 0.7692307692307693,
+    "eval_recall_distorted": 0.8368200836820083,
+    "eval_f1_distorted": 0.8016032064128257,
+    "eval_f1_weighted": 0.7336930153539626,
+    "eval_f1_macro": 0.7096819120867217,
+    "eval_runtime": 11.0382,
+    "eval_samples_per_second": 34.335,
+    "eval_steps_per_second": 1.087,
+    "epoch": 9.0
+  },
+  "confusion_matrix": [
+    [
+      80,
+      60
+    ],
+    [
+      39,
+      200
+    ]
+  ],
+  "classification_report": {
+    "No Distortion": {
+      "precision": 0.6722689075630253,
+      "recall": 0.5714285714285714,
+      "f1-score": 0.6177606177606177,
+      "support": 140.0
+    },
+    "Distorted": {
+      "precision": 0.7692307692307693,
+      "recall": 0.8368200836820083,
+      "f1-score": 0.8016032064128257,
+      "support": 239.0
+    },
+    "accuracy": 0.7387862796833773,
+    "macro avg": {
+      "precision": 0.7207498383968973,
+      "recall": 0.7041243275552899,
+      "f1-score": 0.7096819120867217,
+      "support": 379.0
+    },
+    "weighted avg": {
+      "precision": 0.7334137227044258,
+      "recall": 0.7387862796833773,
+      "f1-score": 0.7336930153539626,
+      "support": 379.0
+    }
+  },
+  "per_category_recall": {
+    "All-or-nothing thinking": 0.7333333333333333,
+    "Emotional Reasoning": 0.85,
+    "Fortune-telling": 0.9047619047619048,
+    "Labeling": 0.84,
+    "Magnification": 0.896551724137931,
+    "Mental filter": 0.8888888888888888,
+    "Mind Reading": 0.8333333333333334,
+    "No Distortion": 0.5714285714285714,
+    "Overgeneralization": 0.75,
+    "Personalization": 0.8695652173913043,
+    "Should statements": 0.8125
+  },
+  "n_train": 1768,
+  "n_val": 379,
+  "n_test": 379,
+  "class_weighted": false,
+  "hyperparameters": {
+    "lr": 2e-05,
+    "weight_decay": 0.01,
+    "epochs": 10,
+    "batch_train": 16,
+    "max_len": 512,
+    "warmup_ratio": 0.1,
+    "early_stop": 3,
+    "seed": 42
+  }
+}

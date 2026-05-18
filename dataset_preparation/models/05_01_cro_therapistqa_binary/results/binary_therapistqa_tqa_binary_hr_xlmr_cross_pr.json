@@ -1,0 +1,22 @@
+{
+  "model": "xlm-roberta-base",
+  "language": "hr",
+  "trained_on": "therapistqa_hr_train",
+  "evaluated_on": "patternreframe_bilingual_test.csv",
+  "accuracy": 0.457323343616865,
+  "f1_weighted": 0.6276209677419354,
+  "f1_macro": 0.3138104838709677,
+  "per_category_recall": {
+    "Black-and-white or polarized thinking / All or nothing thinking": 0.43909774436090226,
+    "Catastrophizing": 0.5137741046831956,
+    "Discounting the positive": 0.27312775330396477,
+    "Jumping to conclusions: Fortune-telling": 0.5007032348804501,
+    "Jumping to conclusions: mind reading": 0.6323319027181689,
+    "Labeling and mislabeling": 0.5351270553064275,
+    "Mental filtering": 0.3378787878787879,
+    "Overgeneralization": 0.5625,
+    "Personalization": 0.5497702909647779,
+    "Should statements": 0.20916030534351146
+  },
+  "n": 6807
+}
