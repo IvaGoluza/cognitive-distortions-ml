@@ -1,0 +1,4 @@
+dataset,raw_chars,unique_chars,raw_M,unique_M,raw_cost_usd,unique_cost_usd
+CognitiveReframing,151914,109812,0.151914,0.109812,3.03828,2.19624
+PatternReframe,3645194,3644848,3.645194,3.644848,72.90388,72.89696
+TherapistQA,2198364,2198364,2.198364,2.198364,43.96728,43.96728
