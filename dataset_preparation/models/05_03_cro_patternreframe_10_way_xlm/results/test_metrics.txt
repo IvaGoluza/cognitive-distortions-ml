@@ -1,0 +1,8 @@
+=== Test set metrics (Croatian PR) ===
+  test_loss: 1.2983
+  test_accuracy: 0.5790
+  test_f1_weighted: 0.5752
+  test_f1_macro: 0.5765
+  test_runtime: 17.9302
+  test_samples_per_second: 379.6400
+  test_steps_per_second: 11.8790
