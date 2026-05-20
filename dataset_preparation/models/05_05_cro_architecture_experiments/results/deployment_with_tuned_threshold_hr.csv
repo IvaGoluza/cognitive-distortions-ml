@@ -1,0 +1,31 @@
+intent,text,expected,prob_distorted,call_thr_0.5,call_thr_best
+distorted,"Ako ne dobijem ovo promaknuće, cijela mi je karijera promašaj.",All-or-nothing thinking,0.967100203037262,Distorted,Distorted
+distorted,Pogriješio sam jednu stvar u prezentaciji i sada će svi misliti da sam nesposoban.,Catastrophizing,0.9652729630470276,Distorted,Distorted
+distorted,"Rekla je da joj se sviđa moj rad, ali sigurno je samo bila pristojna.",Discounting the positive,0.04440857097506523,No Distortion,No Distortion
+distorted,Jednostavno znam da će ovaj spoj proći loše.,Fortune-telling,0.9345046281814575,Distorted,Distorted
+distorted,"Nije mi odgovorio na poruku, sigurno je ljut na mene.",Mind reading,0.03976345807313919,No Distortion,No Distortion
+distorted,Zaboravio sam poslati email. Takav sam idiot.,Labeling,0.13750550150871277,No Distortion,No Distortion
+distorted,Svi su pljeskali osim jedne osobe koja je izgledala dosadno. Cijelo izlaganje je bila katastrofa.,Mental filtering,0.33522412180900574,No Distortion,No Distortion
+distorted,Upropastio sam ovaj razgovor za posao. Nikada neću naći zaposlenje.,Overgeneralization,0.5391592383384705,Distorted,Distorted
+distorted,Partner mi je loše raspoložen. Sigurno sam ja nešto napravio.,Personalization,0.23636433482170105,No Distortion,No Distortion
+distorted,Trebao bih biti puno dalje u karijeri u ovim godinama.,Should statements,0.06002134457230568,No Distortion,No Distortion
+nondistorted,Trebao bih nazvati mamu ovaj vikend.,No Distortion,0.05410357937216759,No Distortion,No Distortion
+nondistorted,Izgleda da bi moglo padati kasnije.,No Distortion,0.20245856046676636,No Distortion,No Distortion
+nondistorted,Sutra u 15 sati imam sastanak.,No Distortion,0.3171706199645996,No Distortion,No Distortion
+nondistorted,Kava je danas dobra.,No Distortion,0.0868828296661377,No Distortion,No Distortion
+nondistorted,Želim ove godine više čitati.,No Distortion,0.19920732080936432,No Distortion,No Distortion
+nondistorted,Bole me leđa nakon cijelog dana sjedenja.,No Distortion,0.056562941521406174,No Distortion,No Distortion
+nondistorted,Umoran sam i mislim da ću ranije u krevet.,No Distortion,0.052722904831171036,No Distortion,No Distortion
+nondistorted,Rok je u petak pa moram završiti izvještaj do četvrtka.,No Distortion,0.1894259750843048,No Distortion,No Distortion
+nondistorted,"Nisam se složio s onim što je rekla, ali razumijem njezin stav.",No Distortion,0.04359264671802521,No Distortion,No Distortion
+nondistorted,"Danas sam nešto napredovao, iako još ima posla.",No Distortion,0.036945223808288574,No Distortion,No Distortion
+ambiguous,Nije me pozdravio na sastanku.,uncertain,0.05763672664761543,No Distortion,No Distortion
+ambiguous,Brinem se da neću imati dovoljno novca za mirovinu.,uncertain,0.9791926145553589,Distorted,Distorted
+ambiguous,"Ako sredstva ne stignu, projekt je gotov.",uncertain,0.08260945230722427,No Distortion,No Distortion
+ambiguous,Šef me ovog tjedna izbjegavao pogledom.,uncertain,0.1274777501821518,No Distortion,No Distortion
+ambiguous,Nisam smio izgubiti živce s njim.,uncertain,0.2037733644247055,No Distortion,No Distortion
+ambiguous,"S obzirom na trenutno tržište, posao u mojoj struci bit će teško naći.",uncertain,0.13682648539543152,No Distortion,No Distortion
+ambiguous,"Općenito mi je dobro išlo, ali stalno razmišljam o onom jednom lošem odgovoru.",uncertain,0.9785998463630676,Distorted,Distorted
+ambiguous,Mislim da nisam dovoljno kvalificiran za ovu poziciju.,uncertain,0.9401294589042664,Distorted,Distorted
+ambiguous,"Tim nije stigao do roka, a ja sam bila voditeljica.",uncertain,0.03931461647152901,No Distortion,No Distortion
+ambiguous,"Nešto ne valja, ali ne mogu točno odrediti što.",uncertain,0.8654017448425293,Distorted,Distorted
