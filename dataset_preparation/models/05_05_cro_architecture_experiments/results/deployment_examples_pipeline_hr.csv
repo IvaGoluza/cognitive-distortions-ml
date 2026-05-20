@@ -1,0 +1,31 @@
+Intent,Thought,Expected,Binary call,Bin prob(D),Pipeline pred,Type argmax,Type max-prob,Agreement
+distorted,"Ako ne dobijem ovo promaknuće, cijela mi je karijera promašaj.",All-or-nothing,Distorted,0.97,All-or-nothing,All-or-nothing,0.66,✓ match
+distorted,Pogriješio sam jednu stvar u prezentaciji i sada će svi misliti da ...,Catastrophizing,Distorted,0.97,Mind reading,Mind reading,0.53,✗ different
+distorted,"Rekla je da joj se sviđa moj rad, ali sigurno je samo bila pristojna.",Discounting +,No Distortion,0.04,ND,Discounting +,0.50,✗ different
+distorted,Jednostavno znam da će ovaj spoj proći loše.,Fortune-telling,Distorted,0.93,Fortune-telling,Fortune-telling,0.57,✓ match
+distorted,"Nije mi odgovorio na poruku, sigurno je ljut na mene.",Mind reading,No Distortion,0.04,ND,Mind reading,0.57,✗ different
+distorted,Zaboravio sam poslati email. Ja sam takav idiot.,Labeling,No Distortion,0.20,ND,Labeling,0.58,✗ different
+distorted,Svi su pljeskali osim jedne osobe koja je izgledala kao da joj je d...,Mental filter,No Distortion,0.40,ND,All-or-nothing,0.67,✗ different
+distorted,Upropastio sam ovaj razgovor za posao. Nikada se neću zaposliti.,Overgeneralization,No Distortion,0.14,ND,Overgeneralization,0.39,✗ different
+distorted,Partner mi je loše raspoložen. Sigurno sam ja nešto napravio.,Personalization,No Distortion,0.24,ND,Mind reading,0.42,✗ different
+distorted,Trebao bih biti puno dalje u karijeri u ovim godinama.,Should,No Distortion,0.06,ND,Should,0.94,✗ different
+nondistorted,Trebao bih nazvati mamu ovaj vikend.,ND,No Distortion,0.05,ND,Should,0.95,✓ match
+nondistorted,Izgleda da bi moglo kišiti kasnije.,ND,No Distortion,0.17,ND,Fortune-telling,0.68,✓ match
+nondistorted,Sutra u 15 sati imam sastanak.,ND,No Distortion,0.32,ND,Fortune-telling,0.62,✓ match
+nondistorted,Kava je danas dobra.,ND,No Distortion,0.09,ND,Mental filter,0.56,✓ match
+nondistorted,Želim ove godine više čitati.,ND,No Distortion,0.20,ND,Fortune-telling,0.63,✓ match
+nondistorted,Bole me leđa nakon cijelog dana sjedenja.,ND,No Distortion,0.06,ND,Mental filter,0.42,✓ match
+nondistorted,Umoran sam i mislim da ću ranije u krevet.,ND,No Distortion,0.05,ND,Catastrophizing,0.52,✓ match
+nondistorted,Rok je u petak pa moram završiti izvještaj do četvrtka.,ND,No Distortion,0.19,ND,Fortune-telling,0.51,✓ match
+nondistorted,"Nisam se složio s onim što je rekla, ali razumijem njezin stav.",ND,No Distortion,0.04,ND,Discounting +,0.81,✓ match
+nondistorted,"Danas sam napredovao, iako još ima posla.",ND,No Distortion,0.04,ND,Discounting +,0.52,✓ match
+ambiguous,Nije me pozdravio na sastanku.,(ambiguous),No Distortion,0.06,ND,Mind reading,0.43,ambiguous
+ambiguous,Brinem se da neću imati dovoljno novca za mirovinu.,(ambiguous),Distorted,0.98,Catastrophizing,Catastrophizing,0.52,ambiguous
+ambiguous,"Ako sredstva ne stignu, projekt je gotov.",(ambiguous),No Distortion,0.08,ND,Mental filter,0.36,ambiguous
+ambiguous,Šef me ovog tjedna izbjegavao pogledom.,(ambiguous),No Distortion,0.13,ND,Personalization,0.32,ambiguous
+ambiguous,Nisam smio izgubiti živce s njim.,(ambiguous),No Distortion,0.20,ND,Personalization,0.44,ambiguous
+ambiguous,"S obzirom na trenutno tržište, bit će teško naći posao u mojoj struci.",(ambiguous),No Distortion,0.16,ND,Fortune-telling,0.45,ambiguous
+ambiguous,"Općenito mi je dobro išlo, ali stalno razmišljam o onom jednom loše...",(ambiguous),Distorted,0.98,Mental filter,Mental filter,0.40,ambiguous
+ambiguous,Mislim da nisam dovoljno kvalificiran za ovu poziciju.,(ambiguous),Distorted,0.94,Labeling,Labeling,0.33,ambiguous
+ambiguous,"Tim nije stigao do roka, a ja sam bila voditeljica.",(ambiguous),No Distortion,0.04,ND,Personalization,0.39,ambiguous
+ambiguous,"Nešto ne valja, ali ne mogu točno odrediti što.",(ambiguous),Distorted,0.87,Mental filter,Mental filter,0.50,ambiguous
