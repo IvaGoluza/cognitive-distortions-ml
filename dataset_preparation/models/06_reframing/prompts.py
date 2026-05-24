@@ -197,9 +197,8 @@ def build_prompt(
 # Decoding parameters (frozen across all experiments)
 # ---------------------------------------------------------------------------
 
+MODEL = "claude-sonnet-4-6"
 DECODING_PARAMS = {
-    "model": "claude-sonnet-4-6",
+    "model": MODEL,
     "max_tokens": 200,
-    "temperature": 0.3,
-    "top_p": 1.0,
 }
