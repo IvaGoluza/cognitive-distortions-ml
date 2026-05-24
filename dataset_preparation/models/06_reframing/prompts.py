@@ -68,10 +68,12 @@ def build_prompt_e2(thought: str, examples: List[Example]) -> str:
 
     header = (
         "Reframe the following unhelpful thought. Below are three examples of "
-        "how to perform this task.\n\n"
+        "how to perform this task. Each example includes the situation in which "
+        "the thought arose, the thought itself, and a reframed thought.\n\n"
     )
     example_blocks = "\n\n".join(
         f"Example {i + 1}\n"
+        f"Situation: {ex.situation}\n"
         f"Thought: {ex.thought}\n"
         f"Reframed thought: {ex.reframe}"
         for i, ex in enumerate(examples)
@@ -95,10 +97,13 @@ def build_prompt_e3(thought: str, category: str, examples: List[Example]) -> str
     header = (
         "Reframe the following unhelpful thought. The thought reflects a "
         f'cognitive distortion of the type "{category}". Below are three '
-        "examples of reframing thoughts that exhibit this same distortion.\n\n"
+        "examples of reframing thoughts that exhibit this same distortion. "
+        "Each example includes the situation in which the thought arose, "
+        "the thought itself, and a reframed thought.\n\n"
     )
     example_blocks = "\n\n".join(
         f"Example {i + 1}\n"
+        f"Situation: {ex.situation}\n"
         f"Thought: {ex.thought}\n"
         f"Reframed thought: {ex.reframe}"
         for i, ex in enumerate(examples)
