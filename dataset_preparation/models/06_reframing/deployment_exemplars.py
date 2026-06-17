@@ -52,7 +52,7 @@ DEPLOYMENT_EXEMPLARS = {
         {
             "situation": "My favorite soccer team made it to the World Cup, but their best player got injured.",
             "thought": "It was all for nothing since the best player is injured.",
-            "reframe": "My favorite soccer team made it to the world cup and their best player got injured but I think this is a great success."
+            "reframe": "My favorite soccer team made it to the world cup and their best player got injured but reaching the World Cup is still a great success."
         },
         {
             "situation": "My date told me she had a great time at the Kings of Leon concert last week.",
@@ -96,7 +96,7 @@ DEPLOYMENT_EXEMPLARS = {
         {
             "situation": "My parents are ignoring me.",
             "thought": "I am sure it's because they hate me for not driving them to the church.",
-            "reframe": "My parents are ignoring me. I'm sure it is in my head and I will ask them if anything is wrong the next time I see them.",
+            "reframe": "My parents are ignoring me. I'm sure it is in my head and I will ask them if anything is wrong.",
         }
     ],
     "labeling": [
@@ -136,7 +136,7 @@ DEPLOYMENT_EXEMPLARS = {
     "overgeneralizing": [
         {
             "situation": "I did not turn off the lights at night.",
-            "thought": "I will never achieve my goal now of a green planet.",
+            "thought": "Now I will never achieve my goal of a green planet.",
             "reframe": "While I'm an environmentalist and I didn't turn off my lights last night, many other people make this same mistake."
         },
         {
@@ -157,9 +157,9 @@ DEPLOYMENT_EXEMPLARS = {
             "reframe": "While I'm an environmentalist and I didn't turn off my lights last night, many other people make this same mistake."
         },
         {
-            "situation": "Three people quit on my job.",
-            "thought": "My job was going great, but one day a brought donuts and three people quit.",
-            "reframe": "I sure it was a coincidence and not due to the donuts. However, I could find out why they left.",
+            "situation": "Three people quit their jobs the week after I brought donuts to the office.",
+            "thought": "My job was going great, but one day I brought donuts and three people quit.",
+            "reframe": "I'm sure it was a coincidence and not due to the donuts. However, I could find out why they left.",
         },
         {
             "situation": "The other day one of my other employees was blamed for the stuff on the shelf falling.",
